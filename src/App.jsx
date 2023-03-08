@@ -8,11 +8,9 @@ const HOST_PATH =
 const images = [
   {
     original: '00f07272-3ba7-47c8-bdaa-e90b9eb50372.jpg',
-    originalHeight: '200px',
   },
   {
     original: '36f39a89-4fff-455d-9562-7e4d85aa8cb5.jpg',
-    originalHeight: '300px',
   },
 ].map((item) => ({ ...item, original: `${HOST_PATH}${item.original}` }));
 
