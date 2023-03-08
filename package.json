@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,7 +17,8 @@
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.4",
-    "vite": "^4.1.4"
+    "vite": "^4.1.4",
+    "@vitejs/plugin-react": "^4.0.0"
   },
   "dependencies": {
     "react-image-gallery": "^1.2.11"
