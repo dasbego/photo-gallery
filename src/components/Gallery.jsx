@@ -52,13 +52,13 @@ const MyGallery = (props) => {
       description: 'Nosotros somos Angie y Memo, y esta es nuestra historia.',
     },
     {
-      original: '36f39a89-4fff-455d-9562-7e4d85aa8cb5.jpg',
+      original: 'IMG_3617.jpg',
       showPlayButton: true,
       videoId: 'jengavideo',
       embedUrl: 'IMG_3618.mp4',
       originalClass: 'video-responsive',
       muted: true,
-      autoplay: false,
+      autoplay: true,
       renderItem: _renderVideo,
       description:
         'Nos conocimos en Abril 2021 en una fiesta jugando Jenga. Este video lo tomó Memo de ese día.',
