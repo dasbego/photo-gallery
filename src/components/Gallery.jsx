@@ -36,6 +36,7 @@ const MyGallery = (props) => {
           type="video/mp4"
           width={item.width ? item.width : 'auto'}
           height="500px"
+          controls
           muted={item.muted}
           src={`${HOST_PATH}${item.embedUrl}`}
           autoPlay={item.autoPlay}
