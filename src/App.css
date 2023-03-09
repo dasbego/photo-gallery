@@ -11,6 +11,18 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
+@media only screen and (max-width: 500px) {
+  .video-responsive video {
+    width: 320px;
+  }
+}
+@media only screen and (min-width: 501px) {
+  .video-responsive video {
+    width: auto;
+  }
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }

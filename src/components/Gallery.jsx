@@ -47,6 +47,7 @@ const MyGallery = (props) => {
       showPlayButton: true,
       videoId: 'jengavideo',
       embedUrl: 'IMG_3618.mp4',
+      originalClass: 'video-responsive',
       muted: true,
       autoplay: false,
       renderItem: _renderVideo,
