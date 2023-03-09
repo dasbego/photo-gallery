@@ -26,6 +26,36 @@
     transform: rotate(360deg);
   }
 }
+.image-gallery-slide .image-gallery-description {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  padding: 30px 10px;
+  background: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(
+    top bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(200, 162, 200, 1) 60%
+  );
+  color: #ac3333 !important; /* Color cobre */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+}
+
+.image-gallery-slide .image-gallery-description::before {
+  content: ''; /* Contenido generado por CSS */
+  position: absolute; /* Posición absoluta */
+  top: -60px; /* Distancia desde el borde superior */
+  left: 50%; /* Posición horizontal centrada */
+  transform: translateX(
+    -50%
+  ); /* Desplazamiento hacia la izquierda para centrar */
+  width: 350px; /* Ancho */
+  height: 120px; /* Altura */
+  background-image: url('https://photo-gallery-dasbego.s3.amazonaws.com/Fotos+Pre+Boda+Babies/gerberas_marco.png'); /* Imagen de fondo */
+  background-size: contain; /* Ajustar tamaño de fondo */
+  background-color: transparent; /* Color de fondo */
+}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {

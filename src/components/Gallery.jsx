@@ -38,12 +38,7 @@ const MyGallery = (props) => {
 
   const data = [
     {
-      original: '00f07272-3ba7-47c8-bdaa-e90b9eb50372.jpg',
-      originalTitle: 'Con los amikos',
-      description: 'Las Estacas, Morelos',
-    },
-    {
-      original: '36f39a89-4fff-455d-9562-7e4d85aa8cb5.jpg',
+      original: 'DSC_1632.JPG',
       description:
         'Nosotros somos Angie y Memo, a pesar de que nos ubicábamos de lejos desde hace más de 8 años nunca nos habíamos animamado a hablarnos',
     },
@@ -119,7 +114,9 @@ const MyGallery = (props) => {
     },
   ].map((item) => ({ ...item, original: `${HOST_PATH}${item.original}` }));
 
-  return <Gallery {...props} items={data} />;
+  return (
+    <Gallery {...props} showPlayButton={false} autoPlay={false} items={data} />
+  );
 };
 
 export default MyGallery;
