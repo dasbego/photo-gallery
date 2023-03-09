@@ -12,26 +12,22 @@
   transition: filter 300ms;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 501px) {
+  .image-gallery-slide .image-gallery-description {
+    font-size: 18px !important;
+  }
   .video-responsive video {
     width: 320px;
   }
-  .image-gallery-slide .image-gallery-description {
-    font-size: 10px !important;
-    margin-top: 10px !important;
-    padding: 10px !important;
-  }
-
   .image-gallery-slide .image-gallery-description::before {
-    width: 100px !important;
-    height: 50px !important;
-    top: -25px !important;
+    width: 200px !important;
+    height: 100px !important;
+    top: -55px !important;
   }
 }
-@media only screen and (min-width: 501px) {
-  .video-responsive video {
-    width: auto;
-  }
+
+.video-responsive video {
+  width: auto;
 }
 
 .logo:hover {
@@ -50,11 +46,11 @@
   }
 }
 .image-gallery-slide .image-gallery-description {
-  font-size: 20px;
+  font-size: 10px;
+  margin-top: 10px;
+  padding: 10px;
   font-weight: bold;
   text-align: center;
-  margin-top: 10px;
-  padding: 30px 10px;
   background: rgba(255, 255, 255, 0.7);
   background: linear-gradient(
     top bottom,
@@ -65,6 +61,10 @@
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); /* Sombra de texto */
 }
 
+.video-responsive video {
+  width: 320px;
+}
+
 .image-gallery-slide .image-gallery-description::before {
   content: ''; /* Contenido generado por CSS */
   position: absolute; /* Posición absoluta */
@@ -73,8 +73,9 @@
   transform: translateX(
     -50%
   ); /* Desplazamiento hacia la izquierda para centrar */
-  width: 350px; /* Ancho */
-  height: 120px; /* Altura */
+  width: 100px;
+  height: 50px;
+  top: -25px;
   background-image: url('https://photo-gallery-dasbego.s3.amazonaws.com/Fotos+Pre+Boda+Babies/gerberas_marco.png'); /* Imagen de fondo */
   background-size: contain; /* Ajustar tamaño de fondo */
   background-color: transparent; /* Color de fondo */
