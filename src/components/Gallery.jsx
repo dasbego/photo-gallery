@@ -39,8 +39,7 @@ const MyGallery = (props) => {
   const data = [
     {
       original: 'DSC_1632.JPG',
-      description:
-        'Nosotros somos Angie y Memo, a pesar de que nos ubicábamos de lejos desde hace más de 8 años nunca nos habíamos animamado a hablarnos',
+      description: 'Nosotros somos Angie y Memo, y esta es nuestra historia.',
     },
     {
       original: '36f39a89-4fff-455d-9562-7e4d85aa8cb5.jpg',
@@ -49,15 +48,16 @@ const MyGallery = (props) => {
       embedUrl: 'IMG_3618.mp4',
       renderItem: _renderVideo,
       description:
-        'Pero tenemos muchos amigos en común, y fue hasta Abril 2021 nos conocimos oficialmente en una fiesta jugando Jenga. Este video lo tomó Memo de ese día.',
-    },
-    { description: 'Supimos que eramos el uno para el otro.' },
-    {
-      description: 'Su primer ramo de Gerberas, las flores favoritas de Angie',
+        'Nos conocimos en Abril 2021 en una fiesta jugando Jenga. Este video lo tomó Memo de ese día.',
     },
     {
+      original: 'DSC_0409.JPG',
       description:
-        'Nuestra primera cita en el parque "Los Columpios", Morelos.',
+        'Una de nuestras primeras citas en el parque "Los Columpios", Morelos.',
+    },
+    {
+      original: 'IMG_4773.jpg',
+      description: 'Su primer ramo de Gerberas, las flores favoritas de Angie.',
     },
     { description: 'Janis y Mila la amaron a primera vista' },
     { description: 'Nos hicimos novios el 16 de Mayo del 2021' },

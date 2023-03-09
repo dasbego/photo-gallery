@@ -38,8 +38,8 @@
     rgba(255, 255, 255, 1) 0%,
     rgba(200, 162, 200, 1) 60%
   );
-  color: #ac3333 !important; /* Color cobre */
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+  color: #5c2920 !important; /* Color cobre */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); /* Sombra de texto */
 }
 
 .image-gallery-slide .image-gallery-description::before {
