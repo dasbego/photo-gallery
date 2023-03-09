@@ -25,10 +25,10 @@ const MyGallery = (props) => {
         <video
           id={item.videoId}
           type="video/mp4"
-          muted
           height="720px"
+          muted={item.muted}
           src={`${HOST_PATH}${item.embedUrl}`}
-          autoPlay
+          autoPlay={item.autoPlay}
           onClick={() => togglePlay(item.videoId)}
         />
         <span className="image-gallery-description">{item.description}</span>
@@ -38,7 +38,7 @@ const MyGallery = (props) => {
 
   const data = [
     {
-      original: 'DSC_1632.JPG',
+      original: 'IMG_8943.jpg',
       description: 'Nosotros somos Angie y Memo, y esta es nuestra historia.',
     },
     {
@@ -46,6 +46,8 @@ const MyGallery = (props) => {
       showPlayButton: true,
       videoId: 'jengavideo',
       embedUrl: 'IMG_3618.mp4',
+      muted: true,
+      autoplay: false,
       renderItem: _renderVideo,
       description:
         'Nos conocimos en Abril 2021 en una fiesta jugando Jenga. Este video lo tomó Memo de ese día.',
@@ -75,7 +77,7 @@ const MyGallery = (props) => {
     {
       original: 'IMG_5333.jpg',
       description:
-        'Memo vivía en Cuernavaca y Angie en CDMX. Pero a pesar de que sólo nos veíamos cada 8 o 15 días, todas las noches nos llamábamos por teléfono. \u{1F4DE}\u{1F49B}',
+        'Memo vivía en Cuernavaca y Angie en CDMX. Pero a pesar de que sólo nos veíamos cada 8 o 15 días, todas las noches nos llamábamos por teléfono sin falta. \u{1F4DE}\u{1F49B}',
     },
     {
       original: 'IMG_6555.jpg',
@@ -85,7 +87,7 @@ const MyGallery = (props) => {
     {
       original: 'IMG_1400.JPG',
       description:
-        'Vacaciones de Fin de Semana en Rosarito, B.C.S. con familia de Angie y amigos.',
+        'Vacaciones de Fin de Semana en Rosarito, B.C.S. con primos de Angie y amigos.',
     },
     {
       original: 'IMG_7250.jpg',
@@ -110,73 +112,73 @@ const MyGallery = (props) => {
       original: 'IMG_8361.mp4',
       showPlayButton: true,
       videoId: 'bicisvideo',
+      muted: true,
+      autoPlay: true,
       embedUrl: 'IMG_8361.mp4',
       renderItem: _renderVideo,
       description:
         'Noviembre 2021. Decidimos compranos unas bicis para salir a rodar, otra de las cosas que tenemos en común.',
     },
     {
-      original: 'IMG_8631.JPG',
+      original: 'IMG_8631.jpg',
       description: 'Nuestra primera Navidad juntos',
     },
     {
-      original: 'IMG_8499.JPG',
+      original: 'IMG_8905.jpg',
       description:
         'Salimos de Vacaciones de fin de año 2021. \u{1F31F} Zipolite y Mazunte, Oaxaca.',
     },
     {
-      original: 'IMG_7572.jpg',
+      original: 'IMG_4671_Original.jpg',
       description: 'Regresamos a Huasca de Ocampo a hacer ciclismo de montaña',
     },
     {
-      original: 'IMG_7572.jpg',
+      original: 'F8F7E61F-203C-4DF3-AE53-2B41E7BCCC5C.MP4',
+      showPlayButton: true,
+      muted: false,
+      autoPlay: false,
+      videoId: 'coldplayvideo',
+      embedUrl: 'F8F7E61F-203C-4DF3-AE53-2B41E7BCCC5C.MP4',
+      renderItem: _renderVideo,
       description:
-        'Hemos ido a muchos conciertos pero el que llevamos siempre en el ❤️ es el de Coldplay del 3 de Abril del 2022',
+        'Nos encantan los conciertos pero el que llevamos siempre en el ❤️ es el de Coldplay del 3 de Abril del 2022',
     },
     {
-      original: 'IMG_7572.jpg',
+      original: 'IMG_5680 (1).jpg',
       description: 'Vacaciones en Q. Roo, Abril 2022.',
     },
     {
-      original: 'IMG_7572.jpg',
+      original: 'IMG_0143.jpg',
       description: 'Viaje a Puerto Escondido con amigos de Memo',
     },
     {
-      original: 'IMG_7572.jpg',
-      description:
-        'Decidimos vivir juntos, y nos mudamos juntos a la CDMX el 30 de Julio del 2022',
+      original: '33f1cc97-cfc2-4b5f-855c-3daba3fc693d.jpg',
+      description: 'Cumpleaños #31 de Angie. Festejando con amigos de Angie.',
     },
     {
-      original: 'IMG_7572.jpg',
-      description:
-        'A los dos nos encanta cocinar. Desde entonces Angie regresa al depa a la hora de la comida. ',
+      original: 'IMG_0612.jpg',
+      description: '17 Septiembre 2022. Parque La Marquesa.',
     },
     {
-      original: 'IMG_7572.jpg',
-      description:
-        'Cumpleaños #31 de Angie. Comenzamos el festejo en nuestro depa con sus amigos.',
+      original: 'IMG_8423.jpg',
+      description: 'Conociendo Maconí, Qro.',
     },
     {
-      original: 'IMG_7572.jpg',
-      description: 'Noviembre 2022. Adoptamos a Coquito.',
+      original: 'IMG_1360.JPG',
+      description: 'Festival Hell & Heaven 2022.',
     },
     {
-      original: 'IMG_7572.jpg',
-      description: 'Navidad 2022.',
-    },
-    {
-      original: 'IMG_7572.jpg',
+      original: 'IMG_2025.jpg',
       description: 'Viaje de Fin de Año 2022. Sayulita, Nayarit.',
     },
     {
-      original: 'IMG_7572.jpg',
+      original: '86d7b531-7e9a-4487-aecd-8a912e24825b.jpg',
       description:
         'En este viaje nos comprometimos en la puesta de Sol del 28 de Diciembre.',
     },
     {
-      original: 'IMG_7572.jpg',
-      description:
-        'En febrero del 2023 decidimos que el 27 de Mayo del 2023 sería el día de Nuestra Boda.',
+      original: 'IMG_9491.jpg',
+      description: 'Esto continuará...',
     },
   ].map((item) => ({ ...item, original: `${HOST_PATH}${item.original}` }));
 
