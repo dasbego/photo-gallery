@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Gallery showBullets lazyLoad={true} showThumbnails={false} />
+      <Gallery lazyLoad={true} showThumbnails={false} />
     </div>
   );
 }

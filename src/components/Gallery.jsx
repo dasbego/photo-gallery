@@ -30,19 +30,42 @@ const MyGallery = (props) => {
   };
   const _renderVideo = (item) => {
     return (
-      <div>
+      <>
         <video
           id={item.videoId}
           type="video/mp4"
           width={item.width ? item.width : 'auto'}
-          height="720px"
+          height="500px"
           muted={item.muted}
           src={`${HOST_PATH}${item.embedUrl}`}
           autoPlay={item.autoPlay}
           onClick={() => togglePlay(item.videoId)}
         />
         <span className="image-gallery-description">{item.description}</span>
-      </div>
+      </>
+    );
+  };
+
+  const _renderPhoto = (item) => {
+    return (
+      <>
+        <img
+          className="image-gallery-image"
+          src={`${item.original}`}
+          width={item.originalWidth || '100%'}
+          height={item.originalHeight || 'auto'}
+        ></img>
+        <span
+          className="image-gallery-description"
+          style={{
+            ...(item.labelPosition === 'top'
+              ? { top: '25px', height: '20px' }
+              : { bottom: '20px' }),
+          }}
+        >
+          {item.description}
+        </span>
+      </>
     );
   };
 
@@ -99,6 +122,7 @@ const MyGallery = (props) => {
       original: 'IMG_1400.JPG',
       description:
         'Vacaciones de Fin de Semana en Rosarito, B.C.S. con primos de Angie y amigos.',
+      labelPosition: 'top',
     },
     {
       original: 'IMG_7250.jpg',
@@ -109,6 +133,7 @@ const MyGallery = (props) => {
       original: 'IMG_7572.jpg',
       description:
         '18 Septiembre 2021. Ex-convento Desierto de Los Leones, CDMX',
+      labelPosition: 'top',
     },
     {
       original: '16f3a6e4-a80a-476d-b1c5-872af8ae026d.jpg',
@@ -118,6 +143,7 @@ const MyGallery = (props) => {
       original: '8f5c7d28-77fe-4e94-ac22-dfab536ac7df.jpg',
       description:
         '8 Noviembre 2021. Redescubrimos nuestro amor al camping en "Los Manantiales", Morelos. \u{1F3D5}\uFE0F',
+      labelPosition: 'top',
     },
     {
       original: 'IMG_8361.mp4',
@@ -195,7 +221,11 @@ const MyGallery = (props) => {
       originalWidth: '820px',
       description: 'Esto continuará...',
     },
-  ].map((item) => ({ ...item, original: `${HOST_PATH}${item.original}` }));
+  ].map((item) => ({
+    ...item,
+    original: `${HOST_PATH}${item.original}`,
+    renderItem: item.embedUrl ? _renderVideo : _renderPhoto,
+  }));
 
   return (
     <Gallery
