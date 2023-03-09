@@ -25,6 +25,7 @@ const MyGallery = (props) => {
         <video
           id={item.videoId}
           type="video/mp4"
+          width={item.width ? item.width : 'auto'}
           height="720px"
           muted={item.muted}
           src={`${HOST_PATH}${item.embedUrl}`}
@@ -137,6 +138,7 @@ const MyGallery = (props) => {
       showPlayButton: true,
       muted: false,
       autoPlay: false,
+      width: '820px',
       videoId: 'coldplayvideo',
       embedUrl: 'F8F7E61F-203C-4DF3-AE53-2B41E7BCCC5C.MP4',
       renderItem: _renderVideo,
@@ -178,6 +180,7 @@ const MyGallery = (props) => {
     },
     {
       original: 'IMG_9491.jpg',
+      originalWidth: '820px',
       description: 'Esto continuará...',
     },
   ].map((item) => ({ ...item, original: `${HOST_PATH}${item.original}` }));
