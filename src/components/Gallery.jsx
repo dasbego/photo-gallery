@@ -59,7 +59,7 @@ const MyGallery = (props) => {
           className="image-gallery-description"
           style={{
             ...(item.labelPosition === 'top'
-              ? { top: '25px', height: '20px' }
+              ? { top: '25px', height: 'fit-content' }
               : { bottom: '20px' }),
           }}
         >
