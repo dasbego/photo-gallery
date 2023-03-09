@@ -4,7 +4,16 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 const HOST_PATH =
   'https://photo-gallery-dasbego.s3.us-east-1.amazonaws.com/Fotos%20Pre%20Boda%20Babies/';
 
+const MOBILE_BREAKPOINT = 500;
+
 const MyGallery = (props) => {
+  const galleryRef = React.createRef();
+
+  React.useEffect(() => {
+    if (window.screen.width <= MOBILE_BREAKPOINT) {
+      galleryRef.current.fullScreen();
+    }
+  });
   const play = (video) => {
     video.play();
   };
@@ -187,7 +196,14 @@ const MyGallery = (props) => {
   ].map((item) => ({ ...item, original: `${HOST_PATH}${item.original}` }));
 
   return (
-    <Gallery {...props} showPlayButton={false} autoPlay={false} items={data} />
+    <Gallery
+      {...props}
+      ref={galleryRef}
+      infinite={false}
+      showPlayButton={false}
+      autoPlay={false}
+      items={data}
+    />
   );
 };
 
