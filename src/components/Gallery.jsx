@@ -82,7 +82,7 @@ const MyGallery = (props) => {
       embedUrl: 'IMG_3618.mp4',
       originalClass: 'video-responsive',
       muted: true,
-      autoplay: true,
+      autoplay: false,
       renderItem: _renderVideo,
       description:
         'Nos conocimos en Abril 2021 en una fiesta jugando Jenga. Este video lo tomó Memo de ese día.',
@@ -152,7 +152,7 @@ const MyGallery = (props) => {
       videoId: 'bicisvideo',
       originalClass: 'video-responsive',
       muted: true,
-      autoPlay: true,
+      autoPlay: false,
       embedUrl: 'IMG_8361.mp4',
       renderItem: _renderVideo,
       description:
