@@ -16,6 +16,17 @@
   .video-responsive video {
     width: 320px;
   }
+  .image-gallery-slide .image-gallery-description {
+    font-size: 10px !important;
+    margin-top: 10px !important;
+    padding: 10px !important;
+  }
+
+  .image-gallery-slide .image-gallery-description::before {
+    width: 100px !important;
+    height: 50px !important;
+    top: -25px !important;
+  }
 }
 @media only screen and (min-width: 501px) {
   .video-responsive video {
